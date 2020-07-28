@@ -15,14 +15,34 @@ class ProductColorsTableSeeder extends Seeder
     {
         for ($i = 1; $i < 4; $i++) {
             for ($j = 1; $j < 4; $j++) {
-                ProductColor::create(
-                    [
-                        'product_id' => $i,
-                        'color_id' => $j,
-                        'image' => 'img',
-                        'active' => 1,
-                    ]
-                );
+                if ($j == 1){
+                    ProductColor::create(
+                        [
+                            'product_id' => $i,
+                            'color_id' => $j,
+                            'image' => 'app\public\images\shirt.jpg',
+                            'active' => 1,
+                        ]
+                    );
+                }else if($j == 2){
+                    ProductColor::create(
+                        [
+                            'product_id' => $i,
+                            'color_id' => $j,
+                            'image' => 'app\public\images\camisa.jpg',
+                            'active' => 1,
+                        ]
+                    );
+                }else if($j == 3){
+                    ProductColor::create(
+                        [
+                            'product_id' => $i,
+                            'color_id' => $j,
+                            'image' => 'app\public\images\prueba.jpg',
+                            'active' => 1,
+                        ]
+                    );
+                }
             }
         }
     }

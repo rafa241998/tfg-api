@@ -24,6 +24,9 @@ class ProductController extends Controller
     //Devuelve los colores de cada producto siempre que esten activos
     public function getColors(Product $product)
     {
+        foreach($product->productColors->where("active", 1) as $p){
+            $p->color;
+        }
         return $product->productColors->where("active", 1);
     }
 

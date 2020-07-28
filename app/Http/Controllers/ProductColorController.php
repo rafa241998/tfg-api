@@ -24,6 +24,9 @@ class ProductColorController extends Controller
     //Devuelve las tallas para cada color siempre que la cantidad sea superior a 0
     public function getSizes(ProductColor $productColor)
     {
+        foreach($productColor->colorSizes->where("quantity",">","0") as $p){
+            $p->size;
+        }
         return $productColor->colorSizes->where("quantity",">","0");
     }
 

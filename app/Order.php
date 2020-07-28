@@ -12,7 +12,7 @@ class Order extends Model
      * @var array
      */
     protected $fillable = [
-        'user_id','address_id','status','subTotal', 'shipping', 'total','details',
+        'user_id','address_id','status','subTotal', 'shipping', 'total','details','orderDate',
     ];
     public function user() {
         return $this->belongsTo('App\User');

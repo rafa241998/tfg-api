@@ -25,7 +25,9 @@ Route::post('login', 'Auth\LoginController@login');
 Route::get('users', 'UserController@index');
 Route::get('users/{user}', 'UserController@show');
 Route::get('users/{user}/addresses', 'UserController@getAddresses');
+Route::get('users/{user}/orders', 'UserController@getOrders');
 Route::get('users/{user}/cart', 'UserController@getCart');
+Route::get('users/{user}/cart/quantity', 'UserController@getCartQuantity');
 Route::post('users/{user}/cart', 'UserController@setCartItem');
 Route::post('users', 'UserController@store');
 Route::put('users/{user}', 'UserController@update');
@@ -42,6 +44,7 @@ Route::get('orders/{order}', 'OrderController@show');
 Route::post('orders', 'OrderController@store');
 Route::put('orders/{order}', 'OrderController@update');
 Route::delete('orders/{order}', 'OrderController@delete');
+Route::get('orders/{order}/orderItems', 'OrderController@getOrder');
 //Payment
 Route::get('payments', 'PaymentController@index');
 Route::get('payments/{payment}', 'PaymentController@show');

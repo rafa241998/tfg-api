@@ -20,7 +20,7 @@ class ProductsTableSeeder extends Seeder
                         'title' => 'producto'.$j,
                         'description' => 'descripcion'.$j,
                         'price' => 15.99,
-                        'image' => 'app\public\images\prueba.jpg',
+                        'image' => 'app\public\images\shirt.jpg',
                     ]
                 );
             }

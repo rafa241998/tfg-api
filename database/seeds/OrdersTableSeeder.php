@@ -2,6 +2,7 @@
 
 use App\Order;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Carbon;
 
 class OrdersTableSeeder extends Seeder
 {
@@ -23,6 +24,7 @@ class OrdersTableSeeder extends Seeder
                     'shipping'=> '3.45',
                     'total'=> '16.99',
                     'details'=> 'Detalles'.$i,
+                    'orderDate'=> Carbon::parse('2020-08-01'),
                 ]
             );
         }

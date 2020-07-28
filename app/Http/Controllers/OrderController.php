@@ -37,4 +37,15 @@ class OrderController extends Controller
 
         return response()->json(null, 204);
     }
+    //Return product from the order
+    public function getOrder(Order $order)
+    {
+        foreach($order->orderItems as $o){
+            $o->colorSize->productColor->product;
+            $o->colorSize->productColor->color;
+            $o->colorSize->size;
+        }
+
+        return $order->orderItems;
+    }
 }
