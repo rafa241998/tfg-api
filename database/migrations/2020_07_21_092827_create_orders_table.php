@@ -22,7 +22,7 @@ class CreateOrdersTable extends Migration
             $table->double('shipping');
             $table->double('total');
             $table->text('details');
-            $table->date('orderDate');
+            $table->datetime('orderDate');
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');

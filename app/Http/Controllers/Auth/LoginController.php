@@ -54,4 +54,8 @@ class LoginController extends Controller
 
         return $this->sendFailedLoginResponse($request);
     }
+    protected function sendFailedLoginResponse()
+    {
+        return response()->json(['message' => 'Failed to authenticate'], 401);
+    }
 }

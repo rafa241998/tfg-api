@@ -46,6 +46,9 @@ class User extends Authenticatable
     public function payments() {
         return $this->hasMany('App\Payment');
     }
+    public function favorites() {
+        return $this->hasMany('App\Favorite');
+    }
     public function cart() {
         return $this->hasOne('App\Cart');
     }

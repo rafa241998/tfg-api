@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Cart;
 use App\User;
 use App\CartItem;
+use App\Favorite;
+use App\Product;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -24,10 +26,40 @@ class UserController extends Controller
         return $user->addresses;
     }
 
+    public function getFavoriteProducts(User $user)
+    {
+        foreach( $user->favorites as $favorite){
+            $favorite->product;
+        }
+        return $user->favorites;
+    }
+
+    public function setFavoriteProduct(User $user, Request $request)
+    {
+        $favorite  = new Favorite($request->all());
+        $user->favorites()->save($favorite);
+    }
+    public function checkFavoriteProduct(User $user, int $product)
+    {
+        if ($user->favorites->where('product_id', $product)->count() > 0){
+            return true;
+        }else{
+            return false;
+        }
+
+    }
+    public function deleteFavoriteProduct(User $user, int $product)
+    {
+       $favorite = $user->favorites->where('product_id', $product)->first();
+       return $favorite->delete();
+
+    }
+
     public function getOrders(User $user)
     {
         return $user->orders;
     }
+
     //Me devuelve el carrito actual del usuario
     public function getCart(User $user)
     {
@@ -87,6 +119,12 @@ class UserController extends Controller
     public function delete(User $user)
     {
         $user->delete();
+
+        return response()->json(null, 204);
+    }
+    public function deleteCartItems(User $user)
+    {
+        $user->cart->cartItems()->delete();
 
         return response()->json(null, 204);
     }

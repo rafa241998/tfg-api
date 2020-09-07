@@ -20,7 +20,7 @@ class ProductColorsTableSeeder extends Seeder
                         [
                             'product_id' => $i,
                             'color_id' => $j,
-                            'image' => 'app\public\images\shirt.jpg',
+                            'image' => 'app\public\images\camisa_cuadros_corta.jpg',
                             'active' => 1,
                         ]
                     );
@@ -29,7 +29,7 @@ class ProductColorsTableSeeder extends Seeder
                         [
                             'product_id' => $i,
                             'color_id' => $j,
-                            'image' => 'app\public\images\camisa.jpg',
+                            'image' => 'app\public\images\camisa_lisa_corta.jpg',
                             'active' => 1,
                         ]
                     );
@@ -38,7 +38,7 @@ class ProductColorsTableSeeder extends Seeder
                         [
                             'product_id' => $i,
                             'color_id' => $j,
-                            'image' => 'app\public\images\prueba.jpg',
+                            'image' => 'app\public\images\camisa_velcro.jpg',
                             'active' => 1,
                         ]
                     );

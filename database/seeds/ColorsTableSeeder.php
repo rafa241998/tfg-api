@@ -16,19 +16,19 @@ class ColorsTableSeeder extends Seeder
             Color::create(
                 [
                     'color' => 'azul',
-                    'hex' => '#0000FF',
+                    'hex' => '#6cc0b4',
                 ]
             );
             Color::create(
                 [
-                    'color' => 'rojo',
-                    'hex' => '#FF0000',
+                    'color' => 'azul',
+                    'hex' => '#7195b3',
                 ]
             );
             Color::create(
                 [
-                    'color' => 'amarillo',
-                    'hex' => '#FFFF00',
+                    'color' => 'beis',
+                    'hex' => '#c29b91',
                 ]
             );
             Color::create(

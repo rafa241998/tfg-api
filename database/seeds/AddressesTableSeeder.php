@@ -13,16 +13,18 @@ class AddressesTableSeeder extends Seeder
     public function run()
     {
         for ($i = 1; $i < 4; $i++) {
-            Address::create(
-                [
-                    'user_id' => $i,
-                    'line1' => 'Calle'.$i,
-                    'postal_code'=> 'Calle'.$i,
-                    'city'=> 'Ciudad'.$i,
-                    'country'=> 'Pais'.$i,
-                    'phone_number'=> 123123123,
-                ]
-            );
+            for ($j = 1; $j < 4; $j++) {
+                Address::create(
+                    [
+                        'user_id' => $i,
+                        'line1' => 'Calle'.$j,
+                        'postal_code'=> 'Calle'.$j,
+                        'city'=> 'Ciudad'.$j,
+                        'country'=> 'Pais'.$j,
+                        'phone_number'=> 123123123,
+                    ]
+                );
+            }
         }
     }
 }

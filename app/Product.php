@@ -21,5 +21,8 @@ class Product extends Model
     public function productColors() {
         return $this->hasMany('App\ProductColor');
     }
+    public function favorites() {
+        return $this->hasMany('App\Favorite');
+    }
 
 }
