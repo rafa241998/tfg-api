@@ -37,4 +37,16 @@ class CartItemController extends Controller
 
         return response()->json(null, 204);
     }
+    public function addItem (CartItem $cartItem)
+    {
+        $cartItem->update(array('quantity' => $cartItem->quantity + 1));
+
+        return response()->json($cartItem, 200);
+    }
+    public function removeItem (CartItem $cartItem)
+    {
+        $cartItem->update(array('quantity' => $cartItem->quantity - 1));
+
+        return response()->json($cartItem, 200);
+    }
 }

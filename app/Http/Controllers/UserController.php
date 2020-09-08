@@ -7,6 +7,7 @@ use App\User;
 use App\CartItem;
 use App\Favorite;
 use App\Product;
+use App\Address;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -24,6 +25,12 @@ class UserController extends Controller
     public function getAddresses(User $user)
     {
         return $user->addresses;
+    }
+
+    public function setAddress(User $user, Request $request)
+    {
+        $address  = new Address($request->all());
+        $user->addresses()->save($address);
     }
 
     public function getFavoriteProducts(User $user)
@@ -105,7 +112,7 @@ class UserController extends Controller
     public function store(Request $request)
     {
         $user = User::create($request->all());
-
+        $user->cart()->create();
         return response()->json($user, 201);
     }
 
@@ -129,3 +136,4 @@ class UserController extends Controller
         return response()->json(null, 204);
     }
 }
+

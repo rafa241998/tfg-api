@@ -17,10 +17,10 @@ class UsersTableSeeder extends Seeder
         //User::truncate();
 
         for ($i = 1; $i < 4; $i++) {
-            User::create([  'first_name' => 'Usuario'.$i,
-                            'last_name' => 'Usuario'.$i,
-                            'email'=> 'Usuario'.$i.'@gmail.com',
-                            'password'=> Hash::make('123456'),
+            User::create([  'first_name' => 'rafa'.$i,
+                            'last_name' => 'rafa'.$i,
+                            'email'=> 'rafa'.$i,
+                            'password'=> Hash::make('1'),
                             'phone_number'=> 'Usuario'.$i,
                         ]);
         }

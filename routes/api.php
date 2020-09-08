@@ -26,6 +26,8 @@ Route::get('users', 'UserController@index');
 Route::get('users/{user}', 'UserController@show');
     //User Addresses
 Route::get('users/{user}/addresses', 'UserController@getAddresses');
+Route::post('users/{user}/addresses', 'UserController@setAddress');
+
     //User Orders
 Route::get('users/{user}/orders', 'UserController@getOrders');
     //User Favorites
@@ -107,6 +109,8 @@ Route::get('cartItems/{cartItem}', 'CartItemController@show');
 Route::post('cartItems', 'CartItemController@store');
 Route::put('cartItems/{cartItem}', 'CartItemController@update');
 Route::delete('cartItems/{cartItem}', 'CartItemController@delete');
+Route::get('cartItems/{cartItem}/add', 'CartItemController@addItem');
+Route::get('cartItems/{cartItem}/remove', 'CartItemController@removeItem');
 //OrderItem
 Route::get('orderItems', 'OrderItemController@index');
 Route::get('orderItems/{orderItem}', 'OrderItemController@show');
@@ -119,3 +123,4 @@ Route::get('favorites/{favorite}', 'FavoriteController@show');
 Route::post('favorites', 'FavoriteController@store');
 Route::put('favorites/{favorite}', 'FavoriteController@update');
 Route::delete('favorites/{favorite}', 'FavoriteController@delete');
+
