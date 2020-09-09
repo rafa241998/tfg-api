@@ -16,14 +16,12 @@ class UsersTableSeeder extends Seeder
         // Let's truncate our existing records to start from scratch.
         //User::truncate();
 
-        for ($i = 1; $i < 4; $i++) {
-            User::create([  'first_name' => 'rafa'.$i,
-                            'last_name' => 'rafa'.$i,
-                            'email'=> 'rafa'.$i,
-                            'password'=> Hash::make('1'),
-                            'phone_number'=> 'Usuario'.$i,
+        User::create([  'first_name' => 'TFG',
+                            'last_name' => 'Example',
+                            'email'=> 'tfg@example.com',
+                            'password'=> Hash::make('tfg12345'),
+                            'phone_number'=> 636872165,
                         ]);
-        }
 
     }
 }

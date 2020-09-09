@@ -12,40 +12,37 @@ class ProductsTableSeeder extends Seeder
      */
     public function run()
     {
-        for ($i = 1; $i < 3; $i++) {
-            for ($j = 1; $j < 4; $j++) {
-                if ($j == 1){
-                    Product::create(
-                        [
-                            'category_id' => $i,
-                            'title' => 'Camisa manga corta cuadros',
-                            'description' => 'Nuestros tejidos a cuadros no se desvanecen. Insistimos en telas de alta calidad en todas las camisas de nuestros hombres.',
-                            'price' => 34.00,
-                            'image' => 'app\public\images\camisa_cuadros_corta.jpg',
-                        ]
-                    );
-                }else if($j == 2){
-                    Product::create(
-                        [
-                            'category_id' => $i,
-                            'title' => 'Camisa manga corta lisa',
-                            'description' => 'descripcion'.$j,
-                            'price' => 29.00,
-                            'image' => 'app\public\images\camisa_lisa_corta.jpg',
-                        ]
-                    );
-                }else if($j == 3){
-                    Product::create(
-                        [
-                            'category_id' => $i,
-                            'title' => 'Camisa manga corta belcro',
-                            'description' => 'descripcion'.$j,
-                            'price' => 36.00,
-                            'image' => 'app\public\images\camisa_velcro.jpg',
-                        ]
-                    );
-                }
-            }
-        }
+
+        Product::create(
+            [
+                'category_id' => 1,
+                'title' => 'Camisa manga larga estampada',
+                'description' => 'Adaptada a personas con movilidad reducida gracias a su obertura posterior.',
+                'price' => 32.00,
+                'image' => 'app\public\images\manga_larga\manga_larga_azul.jpg',
+            ]
+        );
+
+        Product::create(
+            [
+                'category_id' => 1,
+                'title' => 'Camisa manga larga con cuello estampada',
+                'description' => 'Camiseta 100% algodon con cuello de punto',
+                'price' => 27.00,
+                'image' => 'app\public\images\manga_larga_cuello\manga_larga_cuello_lila.jpg',
+            ]
+        );
+
+        Product::create(
+            [
+                'category_id' => 1,
+                'title' => 'Camiseta lisa manga corta',
+                'description' => 'Camiseta de algodón grueso de diversos colores',
+                'price' => 10.00,
+                'image' => 'app\public\images\manga_corta\manga_corta_azul.jpg',
+            ]
+        );
+
+
     }
 }

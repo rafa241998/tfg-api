@@ -12,17 +12,13 @@ class CartItemsTableSeeder extends Seeder
      */
     public function run()
     {
-        for ($i = 1; $i < 4; $i++) {
-            for ($j = 1; $j < 4; $j++) {
-                CartItem::create(
-                    [
-                        'cart_id' => $i,
-                        'color_size_id'=> $i+$j,
-                        'quantity' =>$i+2,
-                        'price' => 15.99,
-                    ]
-                );
-            }
-        }
+        CartItem::create(
+            [
+                'cart_id' => 1,
+                'color_size_id'=> 1,
+                'quantity' => 1,
+                'price' => 15.99,
+            ]
+        );
     }
 }

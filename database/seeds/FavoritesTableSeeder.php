@@ -12,13 +12,11 @@ class FavoritesTableSeeder extends Seeder
      */
     public function run()
     {
-        for ($i = 1; $i < 4; $i++) {
-            for ($j = 1; $j < 3; $j++) {
-                Favorite::create([  'product_id' => $j,
-                'user_id' => $i,
-                ]);
-            }
-
-        }
+        /*
+        Favorite::create([
+            'product_id' => 1,
+            'user_id' => 1,
+        ]);
+        */
     }
 }

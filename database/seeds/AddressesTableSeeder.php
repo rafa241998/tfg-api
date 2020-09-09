@@ -12,19 +12,16 @@ class AddressesTableSeeder extends Seeder
      */
     public function run()
     {
-        for ($i = 1; $i < 4; $i++) {
-            for ($j = 1; $j < 4; $j++) {
-                Address::create(
-                    [
-                        'user_id' => $i,
-                        'line1' => 'Calle'.$j,
-                        'postal_code'=> 'Calle'.$j,
-                        'city'=> 'Ciudad'.$j,
-                        'country'=> 'Pais'.$j,
-                        'phone_number'=> 123123123,
-                    ]
-                );
-            }
-        }
+        Address::create(
+            [
+                'user_id' => 1,
+                'line1' => 'Calle Doctor Sapena, 51',
+                'line2' => 'Muelle de Levante',
+                'postal_code'=> '03013',
+                'city'=> 'Alicante',
+                'country'=> 'España',
+                'phone_number'=> 636874263,
+            ]
+        );
     }
 }

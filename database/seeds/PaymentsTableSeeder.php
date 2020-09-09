@@ -12,13 +12,11 @@ class PaymentsTableSeeder extends Seeder
      */
     public function run()
     {
-        for ($i = 1; $i < 4; $i++) {
-            Payment::create([  'order_id' => $i,
-                             'user_id' => $i,
+        Payment::create([  'order_id' => 1,
+                             'user_id' => 1,
                              'code'=> 123123123,
                              'type'=> 'credit',
                              'status'=> 'success',
                         ]);
-        }
     }
 }

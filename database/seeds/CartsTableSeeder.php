@@ -12,9 +12,6 @@ class CartsTableSeeder extends Seeder
      */
     public function run()
     {
-        for ($i = 1; $i < 4; $i++) {
-
-            Cart::create([  'user_id' => $i]);
-        }
+        Cart::create([  'user_id' => 1]);
     }
 }

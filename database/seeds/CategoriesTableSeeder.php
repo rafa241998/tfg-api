@@ -16,20 +16,12 @@ class CategoriesTableSeeder extends Seeder
 
         Category::create(
             [
-                'title' => 'Pantalones',
-                'description' =>'Pantalones para mujeres',
+                'title' => 'Camisetas',
+                'description' =>'Camisetas para mujeres',
                 'gender' => 'W',
                 'image' => 'img',
             ]
 
-        );
-        Category::create(
-            [
-                'title' => 'Pantalones',
-                'description' =>'Pantalones para hombre',
-                'gender' => 'M',
-                'image' => 'img',
-            ]
         );
 
     }

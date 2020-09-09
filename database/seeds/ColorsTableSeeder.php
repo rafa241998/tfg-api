@@ -12,31 +12,75 @@ class ColorsTableSeeder extends Seeder
      */
     public function run()
     {
-
+            //1
             Color::create(
                 [
-                    'color' => 'azul',
-                    'hex' => '#6cc0b4',
+                    'color' => 'azul_claro_1',
+                    'hex' => '#b2c2d9',
                 ]
             );
+            //2
             Color::create(
                 [
-                    'color' => 'azul',
-                    'hex' => '#7195b3',
+                    'color' => 'rojo_1',
+                    'hex' => '#d51a23',
                 ]
             );
+            //3
             Color::create(
                 [
-                    'color' => 'beis',
-                    'hex' => '#c29b91',
+                    'color' => 'azul_oscuro_1',
+                    'hex' => '#4e72be',
                 ]
             );
+            //4
             Color::create(
                 [
-                    'color' => 'verde',
-                    'hex' => '#008000',
+                    'color' => 'rosa_1',
+                    'hex' => '#fe6ba1',
                 ]
             );
-
+            //5
+            Color::create(
+                [
+                    'color' => 'amarillo_1',
+                    'hex' => '#f6da76',
+                ]
+            );
+            //6
+            Color::create(
+                [
+                    'color' => 'lila_1',
+                    'hex' => '#6c4d91',
+                ]
+            );
+            //7
+            Color::create(
+                [
+                    'color' => 'azul_claro_2',
+                    'hex' => '#54add9',
+                ]
+            );
+            //8
+             Color::create(
+                [
+                    'color' => 'lila_2',
+                    'hex' => '#94a0d2',
+                ]
+            );
+             //9
+             Color::create(
+                [
+                    'color' => 'negro_1',
+                    'hex' => '#25212f',
+                ]
+            );
+            //10
+             Color::create(
+                [
+                    'color' => 'rosa_2',
+                    'hex' => '#f195be',
+                ]
+            );
     }
 }

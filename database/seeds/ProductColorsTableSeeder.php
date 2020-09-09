@@ -13,37 +13,99 @@ class ProductColorsTableSeeder extends Seeder
      */
     public function run()
     {
-        for ($i = 1; $i < 4; $i++) {
-            for ($j = 1; $j < 4; $j++) {
-                if ($j == 1){
-                    ProductColor::create(
-                        [
-                            'product_id' => $i,
-                            'color_id' => $j,
-                            'image' => 'app\public\images\camisa_cuadros_corta.jpg',
-                            'active' => 1,
-                        ]
-                    );
-                }else if($j == 2){
-                    ProductColor::create(
-                        [
-                            'product_id' => $i,
-                            'color_id' => $j,
-                            'image' => 'app\public\images\camisa_lisa_corta.jpg',
-                            'active' => 1,
-                        ]
-                    );
-                }else if($j == 3){
-                    ProductColor::create(
-                        [
-                            'product_id' => $i,
-                            'color_id' => $j,
-                            'image' => 'app\public\images\camisa_velcro.jpg',
-                            'active' => 1,
-                        ]
-                    );
-                }
-            }
-        }
+        //Manga Larga
+        ProductColor::create(
+            [
+                'product_id' => 1,
+                'color_id' => 1,
+                'image' => 'app\public\images\manga_larga\manga_larga_azul.jpg',
+                'active' => 1,
+            ]
+        );
+
+        ProductColor::create(
+            [
+                'product_id' => 1,
+                'color_id' => 2,
+                'image' => 'app\public\images\manga_larga\manga_larga_roja.jpg',
+                'active' => 1,
+            ]
+        );
+
+        ProductColor::create(
+            [
+                'product_id' => 1,
+                'color_id' => 3,
+                'image' => 'app\public\images\manga_larga\manga_larga_azul_oscuro.jpg',
+                'active' => 1,
+            ]
+        );
+
+        ProductColor::create(
+            [
+                'product_id' => 1,
+                'color_id' => 4,
+                'image' => 'app\public\images\manga_larga\manga_larga_rosa.jpg',
+                'active' => 1,
+            ]
+        );
+        //Manga larga cuello
+        ProductColor::create(
+            [
+                'product_id' => 2,
+                'color_id' => 5,
+                'image' => 'app\public\images\manga_larga_cuello\manga_larga_cuello_amarilla.jpg',
+                'active' => 1,
+            ]
+        );
+        ProductColor::create(
+            [
+                'product_id' => 2,
+                'color_id' => 3,
+                'image' => 'app\public\images\manga_larga_cuello\manga_larga_cuello_azul.jpg',
+                'active' => 1,
+            ]
+        );
+        ProductColor::create(
+            [
+                'product_id' => 2,
+                'color_id' => 6,
+                'image' => 'app\public\images\manga_larga_cuello\manga_larga_cuello_lila.jpg',
+                'active' => 1,
+            ]
+        );
+        //Manga corta
+        ProductColor::create(
+            [
+                'product_id' => 3,
+                'color_id' => 7,
+                'image' => 'app\public\images\manga_corta\manga_corta_azul.jpg',
+                'active' => 1,
+            ]
+        );
+        ProductColor::create(
+            [
+                'product_id' => 3,
+                'color_id' => 8,
+                'image' => 'app\public\images\manga_corta\manga_corta_lila.jpg',
+                'active' => 1,
+            ]
+        );
+        ProductColor::create(
+            [
+                'product_id' => 3,
+                'color_id' => 9,
+                'image' => 'app\public\images\manga_corta\manga_corta_negra.jpg',
+                'active' => 1,
+            ]
+        );
+        ProductColor::create(
+            [
+                'product_id' => 3,
+                'color_id' => 10,
+                'image' => 'app\public\images\manga_corta\manga_corta_rosa.jpg',
+                'active' => 1,
+            ]
+        );
     }
 }

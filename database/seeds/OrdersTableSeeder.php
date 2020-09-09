@@ -13,20 +13,17 @@ class OrdersTableSeeder extends Seeder
      */
     public function run()
     {
-        for ($i = 1; $i < 4; $i++) {
-
-            Order::create(
-                [
-                    'user_id' => $i,
-                    'address_id' => $i,
-                    'status'=> 'complete',
-                    'subTotal'=> '13.54',
-                    'shipping'=> '3.45',
-                    'total'=> '16.99',
-                    'details'=> 'Detalles'.$i,
-                    'orderDate'=> Carbon::parse('2020-08-01'),
-                ]
-            );
-        }
+        Order::create(
+            [
+                'user_id' => 1,
+                'address_id' => 1,
+                'status'=> 'complete',
+                'subTotal'=> '13.54',
+                'shipping'=> '3.45',
+                'total'=> '16.99',
+                'details'=> 'null',
+                'orderDate'=> Carbon::parse('2020-08-01'),
+            ]
+        );
     }
 }
